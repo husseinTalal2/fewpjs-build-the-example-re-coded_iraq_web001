@@ -24,7 +24,7 @@ function addHeart(){
 }
 
 document.querySelectorAll(".like").forEach(function(el) {
-  el.addEventListener("click", function(element) {
+  el.addEventListener("click", function() {
     console.log(event.target);
   })
 });

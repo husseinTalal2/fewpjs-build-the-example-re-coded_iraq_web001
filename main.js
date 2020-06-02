@@ -23,7 +23,10 @@ function addHeart(target){
   //const likeSpan = document.getElementsByClassName('like-glyph')[0];
   target.innerHTML = FULL_HEART;
   target.classList.add('activated-heart');
-
+}
+function removeHeart(target){
+  target.innerHTML = EMPTY_HEART;
+  target.classList.remove('activated-heart');
 }
 
 // document.querySelectorAll(".like-glyph").forEach(el => {

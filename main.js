@@ -10,7 +10,7 @@ likeBtn.forEach( el => {
     mimicServerCall()
     .then(addHeart(event.target))
     .catch( err => {
-      console.log(err)
+      // console.log(err)
       removeHeart(event.target)
       showError();
     })

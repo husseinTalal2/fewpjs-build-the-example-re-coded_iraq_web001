@@ -19,6 +19,8 @@ function showError(){
 function addHeart(){
   const likeSpan = document.getElementsByClassName('like-glyph');
   likeSpan.innerHTML = FULL_HEART;
+  likeSpan.classList.add('activated-heart');
+  
 }
 //------------------------------------------------------------------------------
 // Ignore after this point. Used only for demo purposes

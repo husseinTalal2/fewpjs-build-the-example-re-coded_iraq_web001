@@ -8,11 +8,11 @@ const errorModal = document.getElementById('modal');
 likeBtn.forEach( el => {
   el.addEventListener('click',()=>{
     mimicServerCall()
-
+    const e=event.target
     .then(response => {
-      if(event.target.value === FULL_HEART){
-        removeHeart(event.target)
-      }else{addHeart(event.target)}
+      if(e.value === FULL_HEART){
+        removeHeart(e)
+      }else{addHeart(e)}
     })
     .catch( err => {
       console.log(err)

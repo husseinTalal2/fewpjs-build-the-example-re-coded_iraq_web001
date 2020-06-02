@@ -7,8 +7,8 @@ const likeBtn = document.querySelectorAll('.like-glyph');
 const errorModal = document.getElementById('modal');
 likeBtn.forEach( el => {
   el.addEventListener('click',()=>{
+    const e=event.target;
     mimicServerCall()
-    const e=event.target
     .then(response => {
       if(e.value === FULL_HEART){
         removeHeart(e)

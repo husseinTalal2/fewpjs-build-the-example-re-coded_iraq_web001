@@ -8,7 +8,7 @@ const errorModal = document.getElementById('modal');
 likeBtn.forEach( el => {
   el.addEventListener('click',()=>{
     mimicServerCall()
-    
+
     .then(response => {
       if(event.target.value === FULL_HEART){
         removeHeart(event.target)

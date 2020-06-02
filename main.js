@@ -10,10 +10,12 @@ likeBtn.forEach( el => {
     const e=event.target;
     mimicServerCall()
     .then(response => {
-      console.log(e.innerHTML)
       if(e.innerHTML === FULL_HEART){
         removeHeart(e)
-      }else{addHeart(e)}
+      }
+      else{
+        addHeart(e)
+      }
     })
     .catch( err => {
       console.log(err)

@@ -3,13 +3,15 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
-const likeBtn = document.getElementsByClassName('like')[0];
+const likeBtn = document.getElementsByClassName('like');
 const errorModal = document.getElementById('modal');
-likeBtn.addEventListener('click',()=>{
-  mimicServerCall()
-  .then(addHeart())
-  .catch( err => {
-    showError();
+likeBtn.forEach( el => {
+  el.addEventListener('click',()=>{
+    mimicServerCall()
+    .then(addHeart())
+    .catch( err => {
+      showError();
+    })
   })
 })
 function showError(){

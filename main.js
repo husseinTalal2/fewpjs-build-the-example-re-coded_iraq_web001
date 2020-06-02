@@ -17,7 +17,7 @@ function showError(){
   setTimeout(()=>errorModal.classList.add('hidden'),5000);
 }
 function addHeart(){
-  const likeSpan = document.getElementsByClassName('like-glyph');
+  const likeSpan = document.getElementsByClassName('like-glyph')[0];
   likeSpan.innerHTML = FULL_HEART;
   likeSpan.classList.add('activated-heart');
 

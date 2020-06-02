@@ -11,7 +11,7 @@ likeBtn.forEach( el => {
     mimicServerCall()
     .then(response => {
       console.log(e.innerHTML)
-      if(e.value === FULL_HEART){
+      if(e.innerHTML === FULL_HEART){
         removeHeart(e)
       }else{addHeart(e)}
     })

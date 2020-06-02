@@ -23,7 +23,7 @@ function addHeart(target){
 
 }
 
-document.querySelectorAll(".like").forEach(el => {
+document.querySelectorAll(".like-glyph").forEach(el => {
   el.addEventListener("click", function() {
     console.log(event.target);
     addHeart(event.target);

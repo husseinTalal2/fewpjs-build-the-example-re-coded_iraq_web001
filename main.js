@@ -22,6 +22,12 @@ function addHeart(){
   likeSpan.classList.add('activated-heart');
 
 }
+
+document.querySelectorAll(".like").forEach(function(el) {
+  el.addEventListener("click", function(element) {
+    console.log(el);
+  })
+});
 //------------------------------------------------------------------------------
 // Ignore after this point. Used only for demo purposes
 //------------------------------------------------------------------------------

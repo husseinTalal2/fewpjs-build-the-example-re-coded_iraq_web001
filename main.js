@@ -8,9 +8,7 @@ const errorModal = document.getElementById('modal');
 likeBtn.forEach( el => {
   el.addEventListener('click',()=>{
     mimicServerCall()
-    if(event.target.value === FULL_HEART){
     .then(removeHeart(event.target))
-    }
     .then(addHeart(event.target))
     .catch( err => {
       console.log(err)

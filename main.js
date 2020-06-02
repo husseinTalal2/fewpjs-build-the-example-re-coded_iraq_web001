@@ -16,16 +16,17 @@ function showError(){
   errorModal.classList.remove('hidden');
   setTimeout(()=>errorModal.classList.add('hidden'),5000);
 }
-function addHeart(){
-  const likeSpan = document.getElementsByClassName('like-glyph')[0];
-  likeSpan.innerHTML = FULL_HEART;
-  likeSpan.classList.add('activated-heart');
+function addHeart(target){
+  //const likeSpan = document.getElementsByClassName('like-glyph')[0];
+  target.innerHTML = FULL_HEART;
+  target.classList.add('activated-heart');
 
 }
 
-document.querySelectorAll(".like").forEach(function(el) {
+document.querySelectorAll(".like").forEach(el => { 
   el.addEventListener("click", function() {
     console.log(event.target);
+    addHeart(event.target);
   })
 });
 //------------------------------------------------------------------------------

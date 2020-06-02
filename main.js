@@ -17,7 +17,6 @@ likeBtn.forEach( el => {
     })
     .catch( err => {
       console.log(err)
-      removeHeart(event.target)
       showError();
     })
   })

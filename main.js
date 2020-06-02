@@ -8,7 +8,7 @@ const errorModal = document.getElementById('modal');
 likeBtn.forEach( el => {
   el.addEventListener('click',()=>{
     mimicServerCall()
-    .then(addHeart())
+    .then(addHeart(event.target))
     .catch( err => {
       showError();
     })
@@ -25,12 +25,12 @@ function addHeart(target){
 
 }
 
-document.querySelectorAll(".like-glyph").forEach(el => {
-  el.addEventListener("click", function() {
-    console.log(event.target);
-    addHeart(event.target);
-  })
-});
+// document.querySelectorAll(".like-glyph").forEach(el => {
+//   el.addEventListener("click", function() {
+//     console.log(event.target);
+//     addHeart(event.target);
+//   })
+// });
 //------------------------------------------------------------------------------
 // Ignore after this point. Used only for demo purposes
 //------------------------------------------------------------------------------
